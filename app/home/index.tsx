@@ -21,7 +21,7 @@ const PlaceholderImage = require('@/assets/images/background-image.png');
 export default function Index() {
   const [selectedImage, setSelectedImage] = useState<string | undefined>(undefined);
   const [showAppOptions, setShowAppOptions] = useState<boolean>(false);
-  const [isModalVisible, setisModalVisible] = useState<boolean>(false);
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const [pickedEmoji, setPickedEmoji] = useState<ImageSource | undefined>(undefined);
   const [status, requestPermission] = MediaLibrary.usePermissions();
   const imageRef = useRef<View>(null);
@@ -51,7 +51,7 @@ export default function Index() {
   };
 
   const onAddSticker = () => {
-    setisModalVisible(true);
+    setIsModalVisible(true);
   };
 
   const onSaveImageAsync = async () => {
@@ -88,7 +88,7 @@ export default function Index() {
   };
 
   const onModalClose = () => {
-      setisModalVisible(false);
+      setIsModalVisible(false);
   };
 
   return (
